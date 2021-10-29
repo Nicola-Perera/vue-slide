@@ -15,18 +15,19 @@
 
             <div class="main_picture" v-for="country in countries" v-show="country.status">
 
+                <h1>{{country.title}}</h1>
+                    <p>{{country.text}}</p>
                 <img :src="country.image" alt="">
                 
             </div>
             
             <div class="thumbnails" >
-                <button id="slideUp">Up</button>
-                <button id="slideDown">Down</button>
+                <button id="slideUp" @click="slideUp">Up</button>
+                <button id="slideDown" @click="slideDown">Down</button>
+
                 <div v-for="country in countries">
-                    
-                <h1>{{country.title}}</h1>
-                <p>{{country.text}}</p>
-                <img :src="country.image" alt="">
+
+                    <img :src="country.image" alt="">
 
                 </div>
             </div>

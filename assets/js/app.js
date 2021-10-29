@@ -31,7 +31,16 @@ const app = new Vue({
                 text:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima atque reiciendis unde deserunt, temporibus illum neque non sunt eum ducimus eligendi, ea odit fugiat quae? Fugiat nam odit accusantium maiores.',
                 image:'./img/05.jpg',
                 status: false
-            }
+            },
+            
         ]
+    },
+    methods: {
+        slideUp: function() {
+            console.log('su')
+        },
+        slideDown: function() {
+            console.log('giu')
+        }
     }
 })
