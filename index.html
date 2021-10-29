@@ -19,10 +19,16 @@
                 
             </div>
             
-            <div class="thumbnails" v-for="country in countries">
+            <div class="thumbnails" >
+                <button id="slideUp">Up</button>
+                <button id="slideDown">Down</button>
+                <div v-for="country in countries">
+                    
                 <h1>{{country.title}}</h1>
                 <p>{{country.text}}</p>
                 <img :src="country.image" alt="">
+
+                </div>
             </div>
             
         </div>
