@@ -9,7 +9,13 @@
 </head>
 <body>
 
-    <div id="root"></div>
+    <div id="root">
+        <div class="foto" v-for="country in countries">
+            <h1>{{country.title}}</h1>
+            <p>{{country.text}}</p>
+            <img :src="country.image" alt="">
+        </div>
+    </div>
     
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="./assets/js/app.js"></script>
