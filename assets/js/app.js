@@ -1,6 +1,7 @@
 const app = new Vue({
     el: '#root',
     data: {
+        index: 0,
         countries: [
             {
                 title:'Svezia',
@@ -37,10 +38,19 @@ const app = new Vue({
     },
     methods: {
         slideUp: function() {
-            console.log('su')
+            this.index--
+
+            if (this.index < 0) {
+                this.index = this.countries.length -1
+            }
         },
         slideDown: function() {
-            console.log('giu')
+
+            this.index++
+
+            if (this.index > this.countries.length -1) {
+                this.index = 0;
+            }
         }
     }
 })

@@ -13,19 +13,23 @@
 
         <div class="container">
 
-            <div class="main_picture" v-for="country in countries" v-show="country.status">
+            <div class="main_picture">
 
-                <h1>{{country.title}}</h1>
-                    <p>{{country.text}}</p>
-                <img :src="country.image" alt="">
+                <div class="text">
+                    <h1>{{countries[index].title}}</h1>
+                    <p>{{countries[index].text}}</p>
+                </div>
+                    <img :src="countries[index].image" alt="">
                 
             </div>
             
             <div class="thumbnails" >
-                <button id="slideUp" @click="slideUp">Up</button>
-                <button id="slideDown" @click="slideDown">Down</button>
+                <div class="sliders">
+                    <button id="slideUp" @click="slideUp">Up</button>
+                    <button id="slideDown" @click="slideDown">Down</button>
+                </div>
 
-                <div v-for="country in countries">
+                <div v-for="(country, counter) in countries" :class="counter == index ? 'active':''" class="thumbnail">
 
                     <img :src="country.image" alt="">
 

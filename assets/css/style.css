@@ -4,3 +4,62 @@
     margin: 0;
     padding: 0;
 }
+
+/* common rules */
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 70%;
+    height: 400px;
+    margin: 6rem auto;
+    display: flex;
+}
+
+.main_picture {
+    color: white;
+    text-align: right;
+    width: 90%;
+    position: relative;
+}
+.text {
+    position: absolute;
+    bottom: 2rem;
+    margin-right: 1rem;
+}
+.main_picture > img {
+    width: 100%;
+}
+
+.thumbnails {
+    width: 30%;
+    position: relative;
+}
+.sliders {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.sliders > button {
+    font-size: .6rem;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.thumbnail {
+    width: 100%;
+    height: calc(100% / 5);
+}
+.thumbnails img {
+    height: 100%;
+}
+
+.active {
+    border: 2px solid red;
+}
